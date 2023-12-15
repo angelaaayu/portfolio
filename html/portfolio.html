@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="../index.html">Angela Yu</a></h1>
+        <nav>
+            <ol>
+                <li>    
+                    <a class="burgericon" onclick="openSideMenu()" href="#">
+                        <svg viewBox="0 0 100 80" width="40" height="40">
+                            <rect width="100" height="20" ></rect>
+                            <rect y="30" width="100" height="20"></rect>
+                            <rect y="60" width="100" height="20"></rect>
+                        </svg>
+                    </a>
+                </li>
+                <div class="nav-top">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Angela</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact Angela</a></li>
+                </div>
+            </ol>
+        </nav>
+    </header>
+
+    <div class="nav-burger-side" id="side-nav-bar">
+        <ol>
+            <li><a href="#" onclick="closeSideMenu()">&times;</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact Angela</a></li>
+        </ol>
+    </div>
+
+    <div class="portfolio">
+        <h1><span>Angela's</span> Portfolio</h1>
+        <p>Discover a diverse collection of my work, showcasing my expertise across various aspects of multimedia design. I've carefully curated this portfolio to provide you with a comprehensive view of my creative journey and the range of projects I've undertaken. Whether you're interested in web and app UX-UI design, video production and editing, motion graphics, graphic design, or digital marketing strategies, you'll find examples of my work that reflect the depth and breadth of my skills.</p>
+        <p>As you navigate through the different sections of my portfolio, you'll gain insights into my ability to create engaging content, design visually captivating interfaces, and craft compelling visuals. You'll also find evidence of my proficiency in digital advertising, social media management, and email marketing. My portfolio is a testament to my commitment to excellence and innovation in the world of multimedia design. So, dive in and explore the various aspects of my work – I'm excited to share my creative journey with you.</p>
+
+    </div>
+
+    <div class="portfolio-cat">
+        <button type="button" class="filters" data-filter="all">All</button>
+        <button type="button" class="filters" data-filter=".ui">UX UI Design</button>
+        <button type="button" class="filters" data-filter=".video">Video Production</button>
+        <button type="button" class="filters" data-filter=".motion">Motion Graphic</button>
+
+    </div>
+
+    <div class="portfolio-cases">
+        <div class="mix ui"><a href="portfolio-wisebites.html"><img src="../img/portfolio/wisebites.png" alt="UX UI Design"></a></div>
+        <div class="mix motion"><a href="portfolio-yogaish.html"><img src="../img/portfolio/yogaish.png" alt="Motion Graphic"></a></div>
+        <div class="mix video"><a href="portfolio-dorito.html"><img src="../img/portfolio/Doritos.png" alt="Video Production"></a></div>
+    </div>
+
+</body>
+
+<footer>
+    <p>&copy; Angela Yu 2023</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/mixitup@3.3.1/dist/mixitup.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>
