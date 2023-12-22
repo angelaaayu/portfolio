@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital@0;1&display=swap');
 
 /*------------------Default styles----------------*/
 html{
     font-family: 'IBM Plex Serif', serif;
     background-color: #fbfbfb;
+    color: #181818;
+    overflow-x: hidden;
 }
 
 body{
@@ -142,12 +144,11 @@ svg{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #181818;
+    background-color: #dff6ff;
     width: 0%;
     height: 100%;
     overflow: hidden;
     transition: .3s all ease;
-    color: #FFFFFF;
 }
 
 .nav-burger-side ol li{
@@ -157,7 +158,7 @@ svg{
 }
 
 .nav-burger-side ol li a{
-    color: #FFFFFF;
+    color: #181818;
     font-size: 2em;
     text-decoration: none;
 }
@@ -211,30 +212,6 @@ footer p{
     display: grid;
     grid-template-columns: 100%;
 }
-
-/* .main-about{
-    background-color: #051367;
-    margin: 0;
-    height: 70vh;
-    color: #FFFFFF;
-    padding: 120px 0 0 25px;
-    text-align: center;
-    align-content: center;
-}
-
-.main-about svg{
-    stroke: #FFFFFF;
-    width: 24px;
-    fill: none;
-}
-
-.main-about h1{
-    margin-top: 0;
-}
-
-.main-about p{
-    margin: 50px 175px 0 150px;
-} */
 
 .services{
     text-align: center;
@@ -366,12 +343,12 @@ footer p{
 
 .contact{
     text-align: center;
-    display: flex;
     flex-wrap: wrap;
-    margin: 30px 0px 50px 0px;
+    margin: 5rem 0px 50px 0px;
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
+    height: 60vh;
 }
 
 .contact svg{
@@ -562,7 +539,7 @@ ul li .description{
 }
 
 .portfolio p{
-    margin: 20px 175px 0 150px;
+    margin: 20px 175px 2rem 150px;
 }
 
 .portfolio-cat{
@@ -592,60 +569,71 @@ ul li .description{
 }
 
 /*-----------Protfolio Detail Pages-----------*/
-.wisebites-description,
-.yogaish-description,
-.dorito-description{
-    display: grid;
-    width: 80%;
-    grid-template-columns: 1fr 1fr;
+.portfolio-case{
+    text-align: center;
+}
+
+.portfolio-case h1{
+    margin-bottom: 1rem;
+}
+
+.portfolio-case p{
+    margin: 0;
+}
+
+.portfolio-case button{
     justify-content: center;
-    margin: 5vw 0 0 10vw;
+}
+
+#portfolio-banner{
+    padding: 3rem 0 0 0 ;
+    width: 100%;
+}
+
+.portfolio-description{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    margin: 5vw 0 20vw 5vw;
     height: 75vh;
     align-items: center;
     text-align: left;
+    gap: 1rem;
 }
-
-.wisebites-description div:nth-child(1), 
-.wisebites-showcase div:nth-child(1),
-.yogaish-description div:nth-child(1),
-.dorito-description div:nth-child(1){
-    padding-right: 3rem;
-}
-
-.wisebites-description h1,
-.yogaish-description h1,
-.dorito-description h1{
+ 
+.porfolio-description h1{
     text-align: left;
 }
 
-.wisebites-description img,
-.yogaish-description img,
-.dorito-description img{
-    width: 35vw;
+.portfolio-description img{
+    width: 50vw;
 }
 
-.wisebites-details,
-.yogoish-details,
-.dorito-details{
+.portfolio-details1,
+.portfolio-details2{
+    padding: 2rem 5rem 5rem 5rem;
+    height: 40vh;
+}
+
+.portfolio-details1 h1,
+.portfolio-details2 h1{
+    margin-bottom: 3rem;
+
+}
+
+.portfolio-details2{
     background-color: #dff6ff;
-    color: #181818;
-    text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 5rem;
 }
 
-.wisebites-details p,
-.yogoish-details p,
-.dorito-details p{
+.portfolio-description p{
     margin: 50px 175px 50px 150px;
 }
 
-.wisebites-details ul,
-.dorito-details ul{
+.portfolio-details2 ul{
     margin: 50px 175px 50px 150px;
 }
 
-.wisebites-showcase{
+.portfolio-showcase2{
     display: grid;
     width: 80%;
     grid-template-columns: 1fr 1fr;
@@ -654,33 +642,22 @@ ul li .description{
     align-items: center;
 }
 
-.wisebites-showcase img{
+.portfolio-showcase2 img{
     height: 100vh;
 }
 
-.wisebites h1,
-.yogaish h1,
-.dorito h1{
-    text-align: center;
+.portfolio-showcase iframe{
     margin-top: 2rem;
 }
 
-.wisebites-cta,
-.yogoish-cta,
-.dorito-cta{
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.yogoish-showcase iframe,
-.dorito-showcase iframe{
-    margin-top: 2rem;
-}
-
-.yogoish-showcase,
-.dorito-showcase{
+.portfolio-showcase{
     text-align: center;
     margin: 2rem 0 3rem 0;
+}
+
+.portfolio-cta{
+    text-align: center;
+
 }
 
 /*-----------Contact Page-----------*/
@@ -789,36 +766,39 @@ ul li .description{
         padding: 10px 30px;
         margin: 10px 10px;
         font-family: 'IBM Plex Serif', serif;
-        color: #222222;
-        border: 1px solid #db902d;
+        color: #181818;
+        border: 1px solid #ffa17c;
         border-radius: 20px;
     }
 
     footer {
-        text-align: center; 
+        height: 100vh;
+    }
+
+    #copyright{
+        margin: 9rem 0 0 0;
     }
 
     /*------------------Main Page----------------*/
     .hero{
         background-image: none;
-        background-color: #fbfbfb;
+        background-color: #dff6ff;
+        display: block;
+        padding: 0 3rem 0 0;
+    }
+
+    .hero div:nth-child(2)
+    .hero div:nth-child(3){
+        display: none;
     }
 
     .main-about{
         height: 80vh;
     }
 
-    .portfolio-info h3{
-        font-size: 12px;
-    }
-
-    .portfolio-info p{
-        margin: 0;
-        font-size: 10px;
-    }
-
-    .portfolio-info a{
-        font-size: 10px;
+    .main-portfolio-tasks{
+        display: flex;
+        flex-wrap: wrap;
     }
 
     /*------------------About & Portfolio Page----------------*/
@@ -832,27 +812,71 @@ ul li .description{
     }
 
     /*-----------Protfolio Detail Pages-----------*/
-    .wisebites-description,
-    .yogaish-description,
-    .dorito-description{
-        width: 90%;
-        margin: 0 0 0 5rem;
-        height: 85vh;
+    .portfolio-description{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        margin: 5vw 0 20vw 0;
+        height: 100vh;
     }
 
-    .wisebites-showcase img{
+    .portfolio-description img{
+        height: 80vh;
+        width: auto;
+    }
+
+    .portfolio-description p{
+        text-align: center;
+        margin: 50px 3rem 50px 3rem;
+    }
+
+    .portfolio-details2{
         height: 50vh;
+        padding: 2rem 0 5rem 0;
     }
 
-    /*-----------Contact Pages-----------*/
-    .contact p{
-        margin: 1.5rem 2rem 0rem 2rem;
+    .portfolio-details2 p{
+        margin: 50px 3rem 50px 3rem;
     }
+
+    .portfolio-details2 ul{
+        margin: 50px 3rem 50px 3rem;
+    }
+
+    .portfolio-showcase2 img{
+        height: 70vh;
+    }
+
 }
 
-/*Mobile -- breakpoint at 575px*/
-@media screen and (max-width:575px){
+/*Mobile -- breakpoint at 430px*/
+@media screen and (max-width:431px){
+
+    /*------------------Defualt----------------*/
+    header{
+        height: 10vh;
+    }
+
+    .nav-burger-side ol{
+        padding: 0 0 0 0;
+    }
+
     /*------------------Main Page----------------*/
+    .hero{
+        height: 65vh;
+    }
+    .hero h1{
+        padding: 100px 0 5px 2rem;
+    }
+    
+    .hero p{
+        padding: 0 0 1rem 2rem;
+    }
+    
+    .hero button{
+        margin: 0 0 0 2rem;
+    }
+
     .main-about p,
     .services p{
         margin: 3rem 2rem 0 2rem;
@@ -873,12 +897,12 @@ ul li .description{
     }
 
     .portfolio-info p{
-        display: none;
+        font-size: 0.8rem;
     }
 
     /*------------------About Page----------------*/
     .about{
-        height: 100vh;
+        height: 90vh;
     }
 
     .about h1{
@@ -897,43 +921,55 @@ ul li .description{
         gap: 0.5rem;
     }
 
+    .portfolio-cases div img{
+        width: 80vw;
+    }
+
+
     /*-----------Protfolio Detail Pages-----------*/
-    .wisebites-description,
-    .yogaish-description,
-    .dorito-description{
-        width: 90%;
-        margin: 0 0 0 4rem;
-        height: 100vh;
+    .portfolio-description{
+        display: block;
+        width: 100%;
+        margin: 0 0 0 0;
+        padding: 0;
+        height: 75vh;
     }
 
-    .wisebites-description h1,
-    .yogaish-description h1,
-    .dorito-description h1{
-        margin-top: 0;
-        text-align: left;
+    .porfolio-description p{
+        margin: 0;
+        text-align: center;
     }
 
-    .wisebites-details p,
-    .yogoish-details p,
-    .dorito-details p{
-        margin: 1.5rem 2rem 0rem 2rem;
+    .portfolio-description img{
+        width: 80vw;
+        height: auto;
+        padding: 2rem 0 0 2.5rem;
+    }
+    
+    .portfolio-details2{
+        padding: 2rem 0 5rem 0;
     }
 
-    .wisebites-details ul,
-    .dorito-details ul{
-        margin: 1.5rem 2rem 0rem 2rem;
+    .portfolio-details1 p,
+    .portfolio-details2 p{
+        margin: 0 0 0rem 0;
     }
 
-    .yogoish-showcase iframe,
-    .dorito-showcase iframe{
-        width: 450px;
+    .portfolio-details2 ul{
+        margin: 1.5rem 1.5rem 0rem 1rem;
+    }
+    .portfolio-showcase2{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-showcase2 img{
+        width: 80vw;
+        height: auto;
+    }
+
+    .portfolio-showcase iframe{
+        width: 80vw;
     }
 
 }
-
-    
-
-
-
-
-
