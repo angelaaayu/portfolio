@@ -655,6 +655,19 @@ ul li .description{
     margin: 2rem 0 3rem 0;
 }
 
+.portfolio-showcase p{
+    margin: 50px 3rem 50px 3rem;
+}
+
+.portfolio-showcase img{
+    height: 50vh;
+}
+
+.portfolio-showcase a{
+    text-decoration: none;
+    color: #ffa17c;
+}
+
 .portfolio-cta{
     text-align: center;
 
