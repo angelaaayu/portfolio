@@ -621,6 +621,11 @@ ul li .description{
 
 }
 
+.portfolio-details1 p,
+.portfolio-details2 p{
+    margin: 50px 175px 50px 150px;
+}
+
 .portfolio-details2{
     background-color: #dff6ff;
 }
@@ -656,7 +661,7 @@ ul li .description{
 }
 
 .portfolio-showcase p{
-    margin: 50px 3rem 50px 3rem;
+    margin: 50px 175px 50px 150px;
 }
 
 .portfolio-showcase img{
@@ -843,14 +848,17 @@ ul li .description{
         margin: 50px 3rem 50px 3rem;
     }
 
+    .portfolio-details1{
+        height: 60vh;
+        padding: 2rem 0 5rem 0;
+    }
+
+
     .portfolio-details2{
         height: 50vh;
         padding: 2rem 0 5rem 0;
     }
 
-    .portfolio-details2 p{
-        margin: 50px 3rem 50px 3rem;
-    }
 
     .portfolio-details2 ul{
         margin: 50px 3rem 50px 3rem;
@@ -858,6 +866,11 @@ ul li .description{
 
     .portfolio-showcase2 img{
         height: 70vh;
+    }
+
+    .portfolio-showcase img{
+        width: 80vw;
+        height: auto;
     }
 
 }
@@ -958,14 +971,16 @@ ul li .description{
         height: auto;
         padding: 2rem 0 0 2.5rem;
     }
-    
-    .portfolio-details2{
-        padding: 2rem 0 5rem 0;
+
+    .portfolio-details1{
+        height: 50vh;
     }
+    
 
     .portfolio-details1 p,
-    .portfolio-details2 p{
-        margin: 0 0 0rem 0;
+    .portfolio-details2 p,
+    .portfolio-showcase p{
+        margin: 0 1.5rem 0rem 1.5rem;
     }
 
     .portfolio-details2 ul{
