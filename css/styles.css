@@ -46,6 +46,11 @@ p {
     margin-bottom:2rem;    
 }
 
+li {
+    font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400)); 
+    margin-bottom: 1rem;
+}
+
 header{
     height: 15vh;
     display: flex;
@@ -80,6 +85,7 @@ button{
     transition: none;
     border: none;
     color: var(--white);
+    margin-left: 0;
 }
 
 #btn-primary a{
@@ -128,14 +134,8 @@ span{
 
 }
 
-svg{
-    stroke: var(--grey);
-    width: 24px;
-    fill: none;
-}
 
-
-.filters {
+/* .filters {
     background-color: var(--white);
     padding: 16px 35px;
     margin: 10px 10px;
@@ -156,7 +156,7 @@ svg{
     color: var(--grey);
     border: none;
 }
-
+ */
 
 /*Top Navigation Bar*/
 .main-haeder{
@@ -222,6 +222,7 @@ svg{
     height: 100%;
     overflow: hidden;
     transition: .3s all ease;
+    z-index: 2;
 }
 
 .nav-burger-side ol li{
@@ -230,9 +231,6 @@ svg{
     list-style-type: none;
 }
 
-.nav-burger-side ol li:hover {
-    background-color: var(--yellow);
-}
 
 .nav-burger-side ol li a{
     color: var(--grey);
@@ -296,12 +294,6 @@ footer p{
 }
 .services h2{
     color: var(--blue);
-}
-
-.services svg{
-    stroke: var(--grey);
-    width: 24px;
-    fill: none; 
 }
 
 .services p{
@@ -373,7 +365,7 @@ footer p{
     margin: 0;
     padding: 80px 0 80px 0px;
     text-align: center;
-    align-content: center;
+    justify-content: center;
 }
 
 .main-portfolio h2{
@@ -381,7 +373,7 @@ color: var(--blue);
 }
 
 .main-portfolio p{
-    margin: 50px 175px 0 150px;
+    margin: 50px 150px 0 150px;
 }
 
 
@@ -429,6 +421,7 @@ color: var(--blue);
 .portfolio-tasks img{
     display: block;
     width: 100%;
+
 }
 
 .portfolio-info h4{
@@ -509,7 +502,7 @@ color: var(--blue);
 
 .skills {
     text-align: center;
-    height: 80vh;
+    height: auto;
 }
 
 .skills h2{
@@ -749,12 +742,13 @@ ul li .description{
 }
 
 .portfolio-case h2{
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     color: var(--blue);
 }
 
 .portfolio-case p{
     margin: 0;
+    
 }
 
 .portfolio-case button{
@@ -770,8 +764,8 @@ ul li .description{
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr;
-    margin: 5vw 0 20vw 5vw;
-    height: 75vh;
+    margin: 5vw 0 5rem 5vw;
+    height: auto;
     align-items: center;
     text-align: left;
     gap: 1rem;
@@ -783,7 +777,7 @@ ul li .description{
 }
 
 .portfolio-description img{
-    width: 50vw;
+    width: 45vw;
 }
 
 .porfolio-description p{
@@ -821,14 +815,16 @@ ul li .description{
     margin: 50px 175px 50px 150px;
 }
 
+
 .portfolio-showcase2{
     display: grid;
     width: 80%;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
-    margin: 5vw 0 0 10vw;
+    margin: 0 0 0 10vw;
     align-items: center;
     text-align: left;
+    height: auto;
 }
 
 .portfolio-showcase2 img{
@@ -868,20 +864,24 @@ ul li .description{
     font-weight: 700;
 }
 
+#responsive-image{
+    display: none;
+}
+
 .nextPortfolioButton{
     justify-content: center;
-
 }
 
 
 /*------------------Responsive----------------*/
 
-/*Tablet -- breakpoint at 768px*/
-@media screen and (min-width:768px){
+/*Tablet -- breakpoint at 769px*/
+@media screen and (min-width:769px){
     /*------------------Defualt----------------*/
     .burgericon{
         display: none;
     }  
+
 
     /*------------------About Page - Timeline----------------*/
 
@@ -918,8 +918,18 @@ ul li .description{
 
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:769px){
     /*------------------Defualt----------------*/
+    header{
+        height: 10vh;
+    }
+
+    header img{
+        margin-top: 1.5rem;
+        margin-left: 3rem;
+        height: 5vh;
+    }
+    
     .nav-top{
         display: none;
     }
@@ -937,7 +947,7 @@ ul li .description{
         padding: 10px 20px; 
     }
 
-    .filters{
+/*     .filters{
         background-color: var(--white);
         border: none;
         padding: 10px 30px;
@@ -946,7 +956,8 @@ ul li .description{
         color: var(--grey);
         border: 1px solid var(--blue);
         border-radius: 20px;
-    }
+    } */
+
 
     footer {
         height: 100vh;
@@ -959,30 +970,82 @@ ul li .description{
     /*------------------Main Page----------------*/
     .hero{
         background-image: none;
-        background-color: #dff6ff;
+        background-color: var(--white);
         display: block;
-        padding: 0 3rem 0 0;
+        padding: 0;
+        height: auto;
     }
-
-    .hero div:nth-child(2)
-    .hero div:nth-child(3){
-        display: none;
-    }
-
 
     .main-portfolio-tasks{
         display: flex;
         flex-wrap: wrap;
     }
 
+    .hero h1{
+        padding: 3rem 0 0 0;
+        font-size: 3rem;
+    }
+
+    .hero p{
+        margin-top: 0;
+        padding: 0 5rem 1rem 5rem;
+    }
+
+    .main-portfolio p{
+        padding: 0;
+    }
+
+    .portfolio-tasks img{
+        width: 90%;
+    }
+
+    .portfolio-info{
+        width: 77%;
+    }
+    
+    .services p{
+        margin: 50px 5rem 0 5rem;
+    }
+
+    .main-services h3{
+        margin: 0 0 10px 0;
+    }
+
+    .main-services p{
+        margin: 0;
+    }
+
+    .main-services div{
+        padding: 3rem 20px 2rem 20px;
+    }
+    
+
     /*------------------About & Portfolio Page----------------*/
+
     .about{
-        height: 100vh;
+        height: auto;
+        margin-bottom: 5rem;
+    }
+
+    .about h2{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     .about p,
     .portfolio p{
-        margin: 1rem 2rem 0 2rem;
+        margin: 1rem 5rem 0 5rem;
+    }
+
+    .skills {
+        height: auto;
+    }
+    .portfolio-cases{
+        justify-content: center;
+    }
+
+    .portfolio-cases div img{
+        width: 35vw;
     }
 
     /*-----------Protfolio Detail Pages-----------*/
@@ -990,13 +1053,13 @@ ul li .description{
         display: flex;
         flex-wrap: wrap;
         justify-content:center;
-        margin: 5vw 0 20vw 0;
-        height: 100vh;
+        margin: 5rem 0 0 0;
+        height: auto;
+        padding-bottom: 0;
     }
 
     .portfolio-description img{
-        height: 80vh;
-        width: auto;
+        width: 60vw;
     }
 
     .portfolio-description p{
@@ -1005,46 +1068,81 @@ ul li .description{
     }
 
     .portfolio-details1{
-        height: 60vh;
-        padding: 2rem 0 5rem 0;
+        height: auto;
+        padding: 0;
     }
-
 
     .portfolio-details2{
-        height: 50vh;
-        padding: 2rem 0 5rem 0;
+        height: auto;
+        padding: 2rem 0 3rem 0;
     }
 
+    .portfolio-details1 p,
+    .portfolio-details2 p,
+    .portfolio-showcase p,
+    #showcase2text{
+        margin: 1rem 5rem 0 5rem;
+    }
 
     .portfolio-details2 ul{
-        margin: 50px 3rem 50px 3rem;
+        margin: 50px 3rem 0 3rem;
+    }
+
+    #portfolio-banner{
+        padding: 0;
+    }
+
+    .portfolio-showcase2 h3{
+        margin-top: 0;
+        align-items: center;
     }
 
     .portfolio-showcase2 img{
-        height: 70vh;
+        width: 50vw;
+        height: auto;
     }
 
     .portfolio-showcase img{
-        width: 80vw;
+        width: 50vw;
         height: auto;
+    }
+
+    .portfolio-showcase2{
+        margin-bottom: 5rem;
     }
 
 }
 
-/*Mobile -- breakpoint at 430px*/
-@media screen and (max-width:431px){
+/*Mobile -- breakpoint at 390px*/
+@media screen and (max-width:390px){
 
     /*------------------Defualt----------------*/
     header{
-        height: 10vh;
+        height: 5vh;
     }
 
     .nav-burger-side ol{
         padding: 0 0 0 0;
     }
 
+    nav ol li:hover {
+        background-color: none;
+    }
+
+    #btn-primary{
+        text-align: center;
+        margin-bottom: 1rem ;
+        margin-left: 2rem;
+    }
+
+    #btn-secondary{
+        margin-left: 02rem;
+    }
+    
+
     /*------------------Main Page----------------*/
     .hero{
+        padding-right: 1.5rem;
         height: 75vh;
     }
     .hero h1{
@@ -1059,8 +1157,16 @@ ul li .description{
         margin: 0 0 0 2rem;
     }
 
+    .services p{
+        margin: 50px 2rem 0 2rem;
+    }
+
     .main-services{
         gap: 0.5rem;
+    }
+
+    .main-services div{
+        flex-basis: 80%;
     }
 
     .main-services h2,
@@ -1073,13 +1179,36 @@ ul li .description{
         padding: 2rem 2rem 3rem 2rem;
     }
 
-    .portfolio-info p{
-        font-size: 0.6rem;
+    .portfolio-info{
+        width: 70%;
+    }
+
+    .portfolio-tasks img{
+        width: 100%;
+    }
+
+    #project-overview{
+        display: none;
+    }
+
+    .portfolio-info a svg{
+        margin: 0;
+        padding: 0;
+        width: 5vw;
+    }
+
+    .contact p{
+        margin: 50px 1rem 0 1rem;
+    }
+
+    .contact-info p{
+        margin-top: 0;
     }
 
     /*------------------About Page----------------*/
     .about{
-        height: 100vh;
+        margin-top: 5rem;
+        height: auto;
     }
 
     .about h1{
@@ -1092,7 +1221,19 @@ ul li .description{
         margin: 1.5rem 2rem 0rem 2rem;
     }
 
+    .skillslist{
+        grid-template-columns: none;
+    }
+
+    .skillslist div{
+        flex-basis: 100%;
+    }
+
     /*------------------Portfolio Page----------------*/
+    .portfolio{
+        margin-top: 5rem;
+    }
+    
     .portfolio-cases{
         justify-content: center;
         gap: 0.5rem;
@@ -1102,14 +1243,20 @@ ul li .description{
         width: 80vw;
     }
 
-
     /*-----------Protfolio Detail Pages-----------*/
+    .portfolio-case{
+        margin-top: 5rem;
+    }
+
+    .portfolio-case h2{
+        padding: 0 2rem 0 2rem;
+    }
+
     .portfolio-description{
         display: block;
         width: 100%;
-        margin: 0 0 0 0;
+        margin: 0 0 3rem 0;
         padding: 0;
-        height: 85vh;
     }
 
     .porfolio-description p{
@@ -1122,12 +1269,7 @@ ul li .description{
         height: auto;
         padding: 2rem 0 0 2.5rem;
     }
-
-    .portfolio-details1{
-        height: 50vh;
-    }
     
-
     .portfolio-details1 p,
     .portfolio-details2 p,
     .portfolio-showcase p{
@@ -1148,12 +1290,26 @@ ul li .description{
     }
 
     .portfolio-showcase2 img{
-        width: 80vw;
+        width: 90vw;
         height: auto;
     }
 
     .portfolio-showcase iframe{
         width: 80vw;
     }
+
+    #responsive-image{
+        display: block;
+    }
+
+    #non-responsive-image{
+        display: none;
+    }
+
+    #portfolio-banner{
+        display: none;
+    }
+
+    
 
 }

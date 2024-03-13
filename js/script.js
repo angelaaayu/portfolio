@@ -43,25 +43,44 @@ var mixer = mixitup(containerEl, {
  */
 
 
-// Function to redirect to a random portfolio within the same folder
-function redirectToRandomPortfolio() {
+// Function to redirect to the next unseen portfolio
+function redirectToNextPortfolio() {
     // Define an array of filenames for your portfolios
     const portfolioFiles = [
         "portfolio-dorito.html",
         "portfolio-furnitureapp.html",
         "portfolio-ikeaescaperoom.html",
         "portfolio-myhumber.html",
-        "portfolio-wisebites.html"
+        "portfolio-wisebites.html",
+        "portfolio-giftpay.html"
     ];
 
-    // Generate a random index within the range of portfolioFiles array length
-    const randomIndex = Math.floor(Math.random() * portfolioFiles.length);
-    // Get the filename corresponding to the random index
-    const randomPortfolioFile = portfolioFiles[randomIndex];
+    // Get the last visited project from local storage
+    const lastVisitedProject = localStorage.getItem('lastVisitedProject');
 
-    // Redirect to the random portfolio HTML file
-    window.location.href = randomPortfolioFile;
+    // Get the index of the last visited project in the portfolioFiles array
+    const lastIndex = portfolioFiles.indexOf(lastVisitedProject);
+
+    let nextIndex;
+
+    if (lastIndex === -1) {
+        // If the last visited project is not found or local storage is empty,
+        // redirect to the first project
+        nextIndex = 0;
+    } else {
+        // Calculate the index of the next unseen project
+        nextIndex = (lastIndex + 1) % portfolioFiles.length;
+    }
+
+    // Get the filename of the next unseen project
+    const nextPortfolioFile = portfolioFiles[nextIndex];
+
+    // Store the next visited project in local storage
+    localStorage.setItem('lastVisitedProject', nextPortfolioFile);
+
+    // Redirect to the next unseen project
+    window.location.href = nextPortfolioFile;
 }
 
 // Add click event listener to the button with class 'nextPortfolioButton'
-document.querySelector(".nextPortfolioButton").addEventListener("click", redirectToRandomPortfolio);
+document.querySelector(".nextPortfolioButton").addEventListener("click", redirectToNextPortfolio);
